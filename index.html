@@ -3,7 +3,7 @@ layout: default
 ---
 
 <h1>Bali 2015<br>Are you up?</h1>
-<h2 class="u-c-txt">Only 13 spots left. Registration closes in 43 days.</h2>
+<h2 class="u-c-txt">Only 13 spots left. Registration closes in <span id="doMagic"></span> days.</h2>
 <p class="u-c-txt"><a class="button button-primary" href="https://www.facebook.com/groups/732523546826009/permalink/802609086484121/">I'm up</a></p>
 <p class="u-c-txt" style="margin-bottom: 60px; margin-top: 50px;">On the fence? <a href="#going">See who's already going</a>. Don't do me bae (watch).</p>
 <div class="row faces u-c-txt" id="going">
@@ -45,3 +45,11 @@ layout: default
 </a></li>
   </ul>
 </div>
+
+<script>
+var date1 = new Date();
+var date2 = new Date(2015,3,30);
+var diffDays = date2.getTime() - date1.getTime();
+var d = Math.round(diffDays/86400000)
+document.getElementById("doMagic").innerHTML = d;
+</script>
